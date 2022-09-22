@@ -17,12 +17,12 @@ $font_size: {{ .Site.Params.Style.fontSize | default "16px" }} !default;
 $footer_background_color: {{ .Site.Params.Style.footerBackgroundColor | default "#ffffff" }};
 $footer_font_color: {{ .Site.Params.Style.footerFontColor | default "#8a8a8f" }};
 $footer_font_color_hover: {{ .Site.Params.Style.footerFontColorHover | default "#ff8b04" }};
-$footer_font_color_link: {{ .Site.Params.Style.footerFontColorHover | default "#8a8a8f" }};
+$footer_font_color_link: {{ .Site.Params.Style.footerFontColorLink | default "#8a8a8f" }};
 
 $header_background_color: {{ .Site.Params.Style.headerBackgroundColor | default "#ffffff" }};
 $header_font_color: {{ .Site.Params.Style.headerFontColor | default "#000000" }};
 $header_font_color_hover: {{ .Site.Params.Style.headerFontColorHover | default "#ff8b04" }};
-$header_font_color_link: {{ .Site.Params.Style.headerFontColorHover | default "#000000" }};
+$header_font_color_link: {{ .Site.Params.Style.headerFontColorLink | default "#000000" }};
 $header_background: "{{ .Site.Params.headerBackground  | default "" }}";
 
 //$main_section_background_colors: {{ .Site.Params.Style.sectionBackgroundColors | default "#cbdf7c, #91c2b4, #b0c1d5, #cbdf7c, #91c2b4, #b0c1d5" }};
