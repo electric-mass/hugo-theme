@@ -1,0 +1,21 @@
+name = "Electric Mass"
+license = "MIT"
+licenselink = "https://github.com/electric-mass/hugo-theme/blob/master/LICENSE"
+description = "Simple theme for Hugo."
+homepage = "https://github.com/electric-mass/hugo-theme"
+demosite = "https://electric-mass.com/"
+tags = [
+    "clean",
+    "landing page",
+    "simple",
+    "single page",
+    "responsive"
+]
+features = [
+    "favicon"
+]
+min_version = "v0.93.0"
+
+[author]
+  name = "Frederico Martins"
+  homepage = "https://stupidity.rocks/"

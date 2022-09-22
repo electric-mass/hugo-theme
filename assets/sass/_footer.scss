@@ -1,0 +1,50 @@
+/* _footer.scss                                        */
+/*                                                     */
+/* sass code for the Electric Mass Hugo theme.         */
+/*                                                     */
+/* copyright: 2022 Frederico Martins                   */
+/* author: Frederico Martins <http://github.com/fscm>  */
+/* license: SPDX-License-Identifier: MIT               */
+
+footer {
+  background-color: $footer_background_color;
+  color: $footer_font_color;
+  a {
+    color: $footer_font_color_link;
+    &:hover{
+      color: $footer_font_color_hover;
+    }
+  }
+  .content {
+    margin: 0 auto;
+    max-width: $_max_width;
+    padding: 0;
+    text-align: center;
+  }
+  .copyright {
+    ul {
+      display: inline-block;
+      font-size: 0.8rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        list-style: none;
+        display: inline;
+        white-space: nowrap;
+        &:after {
+          content: "\2022";
+          padding: 0 0.4rem;;
+        }
+        &:last-child:after {
+          content: none;
+        }
+      }
+    }
+  }
+  .social {
+    text-align: center;
+    font-size: 1.5rem;
+    padding-bottom: 0;
+  }
+}

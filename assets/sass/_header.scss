@@ -1,0 +1,152 @@
+/* _header.scss                                        */
+/*                                                     */
+/* sass code for the Electric Mass Hugo theme.         */
+/*                                                     */
+/* copyright: 2022 Frederico Martins                   */
+/* author: Frederico Martins <http://github.com/fscm>  */
+/* license: SPDX-License-Identifier: MIT               */
+
+header {
+  position: relative;
+  z-index: 2;
+  background-color: $header_background_color;
+  box-sizing: border-box;
+  color: $header_font_color;
+  @if $header_background != '' {
+    &.background-image {
+      background-blend-mode: darken;
+      background-color: rgba(0,0,0,0.3);
+      background-image: url($header_background);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+  a {
+    color: $header_font_color_link;
+    &:hover{
+      color: $header_font_color_hover;
+    }
+  }
+  h1 {
+    color: $header_font_color;
+    font-size: 2rem;
+    text-align: center;
+  }
+  p {
+    display: inline-block;
+    font-size: 2.5vmin;
+    margin: 0;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  .content {
+    margin: 0 auto;
+    max-width: $_max_width;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    padding: 1rem;
+    place-items: center;
+  }
+  .nav {
+    position: fixed;
+    text-align: right;
+    top: 0;
+    width: 100%;
+    &-toggle {
+      cursor: pointer;
+      .nav-hide {
+        display: none;
+      }
+    }
+    &-checkbox {
+      display: none;
+    }
+    &-menu {
+      align-items: center;
+      display: none;
+      gap: 1rem;
+      margin: 1rem 0 0 0;
+      padding: 1rem;
+      li {
+        list-style: none;
+      }
+      a {
+        display: block;
+        font-size: 2rem;
+        line-height: 2.5rem;;
+        text-align: center;
+      }
+    }
+    .container {
+      font-size: 2rem;
+      line-height: 2rem;
+      margin: 0 auto;
+      max-width: $_max_width;
+      padding: 1rem;
+      position: relative;
+      z-index: 3;
+    }
+    #nav-checkbox:checked {
+      & ~ ul.nav-menu {
+        display: block;
+        background-color: rgba($color: $header_background_color, $alpha: 0.8);
+      }
+      & ~ label.nav-toggle .nav-hide {
+        display: block;
+      }
+      & ~ label.nav-toggle .nav-show {
+        display: none;
+      }
+    }
+  }
+  .logo {
+    height: auto;
+    max-height: 75%;
+    max-width: 100%;
+    width: auto;
+  }
+  .social {
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 1rem 0 0 0;
+  }
+
+}
+
+.nav-background {
+  background-color: rgba($color: $header_background_color, $alpha: 0.8);
+  height: 4rem;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    .nav {
+      &-toggle {
+        display: none;
+      }
+      &-menu {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        a {
+          display: inline;
+          font-size: 1.5rem;
+          line-height: 2rem;
+          padding: 0 0.5rem;
+        }
+        li {
+          display: inline;
+        }
+      }
+    }
+  }
+}

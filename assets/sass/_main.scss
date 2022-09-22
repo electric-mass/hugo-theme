@@ -1,0 +1,104 @@
+/* _main.scss                                          */
+/*                                                     */
+/* sass code for the Electric Mass Hugo theme.         */
+/*                                                     */
+/* copyright: 2022 Frederico Martins                   */
+/* author: Frederico Martins <http://github.com/fscm>  */
+/* license: SPDX-License-Identifier: MIT               */
+
+main {
+  background-color: #ffffff;
+  color: #000000;
+  .content {
+    margin: 0 auto;
+    max-width: $_max_width;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    place-items: center;
+  }
+  h1 {
+    font-size: 10vmin;
+  }
+  p {
+    font-size: 5.5vmin;
+    line-height: 6vmin;
+    text-align: justify;
+  }
+  #releases ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    vertical-align: middle;
+    li {
+      list-style: none;
+      font-size: 5.5vmin;
+      line-height: 5.75vmin;
+      margin: 8px 0;
+    }
+  }
+  #sub-labels ul {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    li {
+      background-color: rgba($color: $main_sublabel_background_color, $alpha: 0.8);
+      border-radius: 0.5rem;
+      list-style: none;
+      display: inline-block;
+      height: 230px;
+      padding: 1rem;
+      width: 330px;
+      img {
+        height: 100%;
+        object-fit: contain;
+        width: 100%;
+      }
+    }
+  }
+  .highlight {
+    padding: 0;
+    &:nth-child(6n - 5) {
+      background-color: nth($main_section_background_colors, 1);
+      color: nth($main_section_font_colors, 1);
+    }
+    &:nth-child(6n - 4) {
+      background-color: nth($main_section_background_colors, 2);
+      color: nth($main_section_font_colors, 2);
+    }
+    &:nth-child(6n - 3) {
+      background-color: nth($main_section_background_colors, 3);
+      color: nth($main_section_font_colors, 3);
+    }
+    &:nth-child(6n - 2) {
+      background-color: nth($main_section_background_colors, 4);
+      color: nth($main_section_font_colors, 4);
+    }
+    &:nth-child(6n - 1) {
+      background-color: nth($main_section_background_colors, 5);
+      color: nth($main_section_font_colors, 5);
+    }
+    &:nth-child(6n) {
+      background-color: nth($main_section_background_colors, 6);
+      color: nth($main_section_font_colors, 6);
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    h1 {
+      font-size: 9vmin;
+    }
+    #releases ul li {
+      font-size: 3.5vmin;
+      line-height: 3.75vmin;
+    }
+  }
+}

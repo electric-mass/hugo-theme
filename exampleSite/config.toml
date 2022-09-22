@@ -1,0 +1,67 @@
+# Electric Mass Hugo theme
+# Configuration parameters.
+
+# baseURL = ""
+enableRobotsTXT = true
+disableKinds = [
+    "RSS",
+    "section",
+    "taxonomy",
+    "term"
+]
+languageCode = 'en-us'
+publishDir = "public"
+themesDir = "../.."
+theme = "electric-mass"
+title = "Site Title"
+
+[author]
+    name = "Site Author"
+
+[params]
+    # copyright = "&copy; 2022 Site Owner"
+    # description = "Website short description."
+    # headerBackground = "/images/background.jpg"
+    # headerLogo = "/images/logo-big.png"
+    # headerSubtitle = "This is the header subtitle."
+    # keywords = ["keyword1", "keyword2"]
+    revisitAfter = "30"
+    showFooterSocial = true
+    showHeaderSocial = true
+
+    [[params.social]]
+        name = "instagram"
+        url = "https://www.instagram.com/myprofile"
+    [[params.social]]
+        name = "facebook"
+        url = "https://www.facebook.com/myprofile"
+
+    # [[params.menuExtras]]
+    #     name = "shop"
+    #     url = "https://shop.mydomain.com/"
+
+    # [params.style]
+        # backgroundColor = "#000000"
+        # faviconBackgroundColor = "#000000"
+        # fontColor = "#f8f8f8"
+        # fontColorHeader = "#f8f8f8"
+        # fontColorHover = "#8a8a8f"
+        # fontColorLink = "#000000"
+        # fontSize = "16px"
+        # footerBackgroundColor = "#000000"
+        # footerFontColor = "#8a8a8f"
+        # footerFontColorHover = "#f8f8f8"
+        # footerFontColorLink = "#8a8a8f"
+        # headerBackground = "/images/background.jpg"
+        # headerBackgroundColor = "#000000"
+        # headerFontColor = "#ffffff"
+        # headerFontColorHover = "#8a8a8f"
+        # headerFontColorLink = "#ffffff"
+        # sectionBackgroundColors = "#ffffff, #f3f3f3, #ffffff, #f3f3f3, #ffffff, #f3f3f3"
+        # sectionFontColors = "#000000, #000000, #000000, #000000, #000000, #000000"
+
+[minify]
+  disableCSS = false
+  disableHTML = false
+  disableXML = false
+  minifyOutput = true

@@ -1,0 +1,45 @@
+<div class="nav-background"></div>
+{{ if .Site.Params.headerBackground }}
+<header class="background-image">
+{{ else }}
+<header>
+{{ end }}
+  <div class="content">
+    {{ if .Site.Params.headerLogo }}
+    <img class="logo" src="{{ .Site.Params.headerLogo | path.Clean | absURL }}" alt="{{ .Site.Title | safeHTML }}">
+    {{ else }}
+    <h1>{{ or .Site.Params.headerTitle .Site.Title | safeHTML }}</h1>
+    {{ end }}
+    {{ with .Site.Params.headerSubtitle }}<p>{{ . | safeHTML }}</p>{{ end }}
+    {{ if .Site.Params.showHeaderSocial }}
+    <section class="social">
+      {{ range .Site.Params.social }}
+      <a class="icon icon-{{ .name }}" href="{{ .url | safeURL }}" rel="external" target="_blank"></a>
+      {{ end }}
+    </section>
+    {{ end }}
+  </div>
+  <nav class="nav">
+    <div class="container">
+      <input id="nav-checkbox" class="nav-checkbox" type="checkbox">
+      <label id="nav-toggle" class="nav-toggle" for="nav-checkbox">
+        <span class="icon icon-bars nav-show"></span>
+        <span class="icon icon-xmark nav-hide"></span>
+      </label>
+      <ul class="nav-menu">
+        {{ range .Site.Params.menuExtras }}
+        <li><a class="menu" href="{{ .url | safeURL }}">{{ .name | title | safeHTML }}</a></li>
+        {{ end }}
+        {{ range (where .Site.RegularPages "Section" "section") }}
+        <li><a class="menu" href="#{{ replace .Title " " "-" | lower }}">{{ .Title | title | safeHTML }}</a></li>
+        {{ end }}
+        {{ if gt (len (where .Site.RegularPages "Section" "sub-label")) 0 }}
+        <li><a class="menu" href="#sub-labels">Sub-Labels</a></li>
+        {{ end }}
+        {{ if gt (len (where .Site.RegularPages "Section" "release")) 0 }}
+        <li><a class="menu" href="#releases">Releases</a></li>
+        {{ end }}
+      </ul>
+    </div>
+  </nav>
+</header>

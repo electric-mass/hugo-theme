@@ -1,0 +1,49 @@
+/* main.scss                                           */
+/*                                                     */
+/* sass code for the Electric Mass Hugo theme.         */
+/*                                                     */
+/* copyright: 2022 Frederico Martins                   */
+/* author: Frederico Martins <http://github.com/fscm>  */
+/* license: SPDX-License-Identifier: MIT               */
+
+$background_color: {{ .Site.Params.Style.backgroundColor | default "#ffffff" }};
+
+$font_color: {{ .Site.Params.Style.fontColor | default "#f8f8f8" }};
+$font_color_header: {{ .Site.Params.Style.fontColorHeader | default "#f8f8f8" }};
+$font_color_hover: {{ .Site.Params.Style.fontColorHover | default "#ff8b04" }};
+$font_color_link: {{ .Site.Params.Style.fontColorLink | default "#000000" }};
+$font_size: {{ .Site.Params.Style.fontSize | default "16px" }} !default;
+
+$footer_background_color: {{ .Site.Params.Style.footerBackgroundColor | default "#ffffff" }};
+$footer_font_color: {{ .Site.Params.Style.footerFontColor | default "#8a8a8f" }};
+$footer_font_color_hover: {{ .Site.Params.Style.footerFontColorHover | default "#ff8b04" }};
+$footer_font_color_link: {{ .Site.Params.Style.footerFontColorHover | default "#8a8a8f" }};
+
+$header_background_color: {{ .Site.Params.Style.headerBackgroundColor | default "#ffffff" }};
+$header_font_color: {{ .Site.Params.Style.headerFontColor | default "#000000" }};
+$header_font_color_hover: {{ .Site.Params.Style.headerFontColorHover | default "#ff8b04" }};
+$header_font_color_link: {{ .Site.Params.Style.headerFontColorHover | default "#000000" }};
+$header_background: "{{ .Site.Params.headerBackground  | default "" }}";
+
+//$main_section_background_colors: {{ .Site.Params.Style.sectionBackgroundColors | default "#cbdf7c, #91c2b4, #b0c1d5, #cbdf7c, #91c2b4, #b0c1d5" }};
+$main_section_background_colors: {{ .Site.Params.Style.sectionBackgroundColors | default "#a56729, #ffffff, #a56729, #ffffff, #a56729, #ffffff" }};
+$main_section_font_colors: {{ .Site.Params.Style.sectionFontColors | default "#000000, #000000, #000000, #000000, #000000, #000000" }};
+$main_sublabel_background_color: {{ .Site.Params.Style.sublabelBackgroundColor | default "#ffffff" }};
+
+$_font_family: 'Noto Sans Display', sans-serif;
+$_line_height: 1.375em;
+$_font_weight_regular: 400;
+$_font_weight_bold: 700;
+$_max_width: 1280px;
+$_min_grid_width: 250px;
+$_padding: 1rem;
+$_grid_gap: 1rem;
+
+@import 'vendor/modern-normalize/modern-normalize';
+
+/*! {{ with .Site.Data.theme.__info__ }}{{ .name }} v{{ .version }} | {{ .license }} | {{ .homepage }}{{ end }} */
+@import 'icons';
+@import 'html';
+@import 'header';
+@import 'main';
+@import 'footer';

@@ -1,0 +1,57 @@
+/* _icons.scss                                         */
+/*                                                     */
+/* sass code for the Electric Mass Hugo theme.         */
+/*                                                     */
+/* copyright: 2022 Frederico Martins                   */
+/* author: Frederico Martins <http://github.com/fscm>  */
+/* license: SPDX-License-Identifier: MIT               */
+
+$icons-font-display: block !default;
+$icons-font-family: 'icons' !default;
+$icons-font-path: '/fonts' !default;
+$icons-font-prefix: 'icon' !default;
+
+$icons: (
+  'bandcamp': '\e900',
+  'bars': '\e901',
+  'facebook': '\e902',
+  'flickr': '\e903',
+  'instagram': '\e904',
+  'lastfm': '\e905',
+  'linkedin': '\e906',
+  'pinterest': '\e907',
+  'snapchat': '\e908',
+  'soundcloud': '\e909',
+  'tiktok': '\e90a',
+  'twitter': '\e90b',
+  'xmark': '\e90c',
+  'youtube': '\e90d',
+);
+
+@font-face {
+  font-display: $icons-font-display;
+  font-family: '#{$icons-font-family}';
+  font-style: normal;
+  font-weight: normal;
+  src:
+  url('#{$icons-font-path}/#{$icons-font-family}.woff2?5esldp') format('woff2'),
+  url('#{$icons-font-path}/#{$icons-font-family}.ttf?5esldp') format('truetype');
+}
+
+.icon {
+  font-family: '#{$icons-font-family}' !important;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@each $name, $value in $icons {
+  .#{$icons-font-prefix}-#{$name} {
+    &:before {
+      content: '#{$value}';
+    }
+  }
+}
