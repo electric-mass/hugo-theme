@@ -43,7 +43,7 @@ title = "Site Title"
 
     # [params.style]
         # backgroundColor = "#000000"
-        # faviconBackgroundColor = "#000000"
+        # faviconBackgroundColor = "#ffffff"
         # fontColor = "#f8f8f8"
         # fontColorHeader = "#f8f8f8"
         # fontColorHover = "#ff8b04"
