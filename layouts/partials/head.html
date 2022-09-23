@@ -37,7 +37,7 @@
 {{ if (fileExists (path.Join "static" "android-chrome-192x192.png")) }}<link rel="icon" type="image/png" sizes="192x192" href="{{ "android-chrome-192x192.png" | relURL }}">{{ end }}
 {{ if (fileExists (path.Join "static" "favicon-16x16.png")) }}<link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png" | relURL }}">{{ end }}
 {{ if (fileExists (path.Join "static" "site.webmanifest")) }}<link rel="manifest" href="{{ "site.webmanifest" | relURL }}">{{ end }}
-{{ if (fileExists (path.Join "static" "safari-pinned-tab.svg")) }}<link rel="mask-icon" href="{{ "safari-pinned-tab.svg" | relURL }}" color="{{ .Site.Params.Style.faviconBackgroundColor | default "#ffffff" }}">{{ end }}
+{{ if (fileExists (path.Join "static" "safari-pinned-tab.svg")) }}<link rel="mask-icon" href="{{ "safari-pinned-tab.svg" | relURL }}" color="{{ .Site.Params.Style.safariPinnedTabColor | default "#000000" }}">{{ end }}
 {{ if (fileExists (path.Join "static" "favicon.ico")) }}<link rel="shortcut icon" href="{{ "favicon.ico" | relURL }}">{{ end }}
 <meta name="apple-mobile-web-app-title" content="{{ $.Site.Title }}">
 <meta name="application-name" content="{{ $.Site.Title }}">

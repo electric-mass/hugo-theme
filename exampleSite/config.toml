@@ -57,6 +57,7 @@ title = "Site Title"
         # headerFontColor = "#000000"
         # headerFontColorHover = "#ff8b04"
         # headerFontColorLink = "#000000"
+        # safariPinnedTabColor = "#000000"
         # sectionBackgroundColors = "##a56729, #ffffff, #a56729, #ffffff, #a56729, #ffffff"
         # sectionFontColors = "#000000, #000000, #000000, #000000, #000000, #000000"
 
