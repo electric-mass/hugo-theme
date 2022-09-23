@@ -2,7 +2,7 @@
   <div class="content">
     {{ if .Site.Params.contactForm }}
     {{ end }}
-    {{ if .Site.Params.showHeaderSocial }}
+    {{ if .Site.Params.showFooterSocial }}
     <section class="social">
       {{ range .Site.Params.social }}
       <a class="icon icon-{{ .name }}" href="{{ .url | safeURL }}" rel="external" target="_blank"></a>
@@ -12,7 +12,9 @@
     <section class="copyright">
       <ul>
         <li>{{ with .Site.Params.copyright }}{{ . | safeHTML }}{{ else }}&copy; {{ now.Year }}{{ end }}</li>
-        {{ with .Site.Data.theme.__info__ }}<li><a href="{{ .homepage | safeURL }}" rel="external" target="_blank">{{ .name }} v{{ .version }}</a></li>{{ end }}
+        {{ if not .Site.Params.hideFooterTheme }}
+          {{ with .Site.Data.theme.__info__ }}<li><a href="{{ .homepage | safeURL }}" rel="external" target="_blank">{{ .name }} v{{ .version }}</a></li>{{ end }}
+        {{ end }}
       </ul>
     </section>
   </div>
