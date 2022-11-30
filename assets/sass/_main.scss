@@ -26,6 +26,10 @@ main {
     font-size: 5.5vmin;
     line-height: 6vmin;
     text-align: justify;
+    width: 100%;
+    a {
+      text-decoration: underline;
+    }
   }
   #releases ul {
     list-style: none;

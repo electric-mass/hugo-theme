@@ -25,7 +25,6 @@ $header_font_color_hover: {{ .Site.Params.Style.headerFontColorHover | default "
 $header_font_color_link: {{ .Site.Params.Style.headerFontColorLink | default "#000000" }};
 $header_background: "{{ .Site.Params.headerBackground  | default "" }}";
 
-//$main_section_background_colors: {{ .Site.Params.Style.sectionBackgroundColors | default "#cbdf7c, #91c2b4, #b0c1d5, #cbdf7c, #91c2b4, #b0c1d5" }};
 $main_section_background_colors: {{ .Site.Params.Style.sectionBackgroundColors | default "#a56729, #ffffff, #a56729, #ffffff, #a56729, #ffffff" }};
 $main_section_font_colors: {{ .Site.Params.Style.sectionFontColors | default "#000000, #000000, #000000, #000000, #000000, #000000" }};
 $main_sublabel_background_color: {{ .Site.Params.Style.sublabelBackgroundColor | default "#ffffff" }};
