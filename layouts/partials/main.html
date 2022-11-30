@@ -1,5 +1,5 @@
 <main>
-  {{ range (where .Site.RegularPages "Section" "section") }}
+  {{ range (where .Site.RegularPages "Section" "section").ByDate }}
   <section id="{{ replace .Title " " "-" | lower }}" class="highlight">
     <div class="content">
       <h1>{{ .Params.Title | title | safeHTML }}</h1>
