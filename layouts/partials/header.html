@@ -30,7 +30,7 @@
         {{ range .Site.Params.menuExtras }}
         <li><a class="menu" href="{{ .url | safeURL }}">{{ .name | title | safeHTML }}</a></li>
         {{ end }}
-        {{ range (where .Site.RegularPages "Section" "section") }}
+        {{ range (where .Site.RegularPages "Section" "section").ByDate }}
         <li><a class="menu" href="#{{ replace .Title " " "-" | lower }}">{{ .Title | title | safeHTML }}</a></li>
         {{ end }}
         {{ if gt (len (where .Site.RegularPages "Section" "sub-label")) 0 }}
